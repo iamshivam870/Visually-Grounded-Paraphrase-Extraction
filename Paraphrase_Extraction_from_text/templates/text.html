@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Paraphrase</title>
+<style>
+    /* Basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        background-color: #f2f2f2; /* Background color for the entire page */
+    }
+    .container {
+        max-width: 800px; /* Maximum width of the container */
+        margin: 20px auto; /* Center the container horizontally and add space from top */
+        padding: 100px; /* Add padding */
+        border: 4px solid #ccc; /* Add border */
+        border-radius: 10px; /* Add border radius */
+        background-color: #fff; /* Background color for the content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    }
+    h1 {
+        text-align: center; /* Center the title */
+    }
+    .text-box {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in the width */
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .submit-button {
+        display: block;
+        width: 200px;
+        padding: 10px;
+        margin: 0 auto; /* Center the button horizontally */
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Text Paraphrase</h1>
+        <form action="/paraphrase" method="post">
+            <textarea class="text-box" name="input_text" placeholder="Enter your text here"></textarea>
+            <button type="submit" class="submit-button">Paraphrase</button>
+        </form>
+    </div>
+
+    <a href="/" style="display: block; text-align: center; margin-top: 20px;">Go back to Home</a>
+</body>
+</html>

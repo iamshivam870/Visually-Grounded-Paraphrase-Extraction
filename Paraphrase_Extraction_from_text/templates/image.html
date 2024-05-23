@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Paraphrase</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Paraphrase</h1>
+        <input type="file" accept="image/*" class="upload-input" id="imageInput">
+        <button class="upload-button" onclick="uploadImage()">Upload Image</button>
+        <div class="paraphrase-output"></div>
+    </div>
+
+    <a href="Home.html" style="display: block; text-align: center; margin-top: 20px;">Go back to Home</a>
+
+    <script>
+        function uploadImage() {
+            var input = document.getElementById('imageInput');
+            var file = input.files[0];
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('image', file);
+
+                fetch('/process_image', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display paraphrased text
+                    var outputDiv = document.querySelector('.paraphrase-output');
+                    outputDiv.innerHTML = '<h2>Paraphrased Text:</h2>';
+                    data.forEach(paraphrase => {
+                        outputDiv.innerHTML += '<p>' + paraphrase + '</p>';
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+            } else {
+                alert("Please select an image.");
+            }
+        }
+    </script>
+</body>
+</html>

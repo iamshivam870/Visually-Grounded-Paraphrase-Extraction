@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paraphrase Result</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: green;
+    }
+
+    .result-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        max-width: 80%;
+        text-align: center;
+        background-color: blue; /* Background color set to blue */
+        color: white; /* Text color set to white for better readability */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-box">
+            <h1>Paraphrase Result</h1>
+            <p>Paraphrased Text: {{ paraphrased_text }}</p>
+            <a href="/" style="display: block; text-align: center; margin-top: 20px;">Go back to Paraphrase</a>
+        </div>
+    </div>
+</body>
+</html>

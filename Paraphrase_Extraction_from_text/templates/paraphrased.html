@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paraphrased Text</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Paraphrased Text</h1>
+        <div class="paraphrases">
+            {% for paraphrase in paraphrases %}
+            <p>{{ paraphrase }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="/" style="display: block; text-align: center; margin-top: 20px;">Go back to Input</a>
+</body>
+</html>
